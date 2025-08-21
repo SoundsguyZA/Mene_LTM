@@ -1,0 +1,41 @@
+services:
+  db:
+    image: ankane/pgvector:latest
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports: ["5432:5432"]
+    volumes: [ "pgdata:/var/lib/postgresql/data" ]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  api:
+    build: { context: ./api }
+    environment:
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - EMBED_PROVIDER=${EMBED_PROVIDER}
+      - EMBED_MODEL=${EMBED_MODEL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL}
+      - API_PORT=${API_PORT}
+      - API_HOST=${API_HOST}
+      - API_AUTH_TOKEN=${API_AUTH_TOKEN}
+      - RECALL_TOP_K=${RECALL_TOP_K}
+      - IMPORTANCE_BOOST=${IMPORTANCE_BOOST}
+      - RECENCY_HALF_LIFE_DAYS=${RECENCY_HALF_LIFE_DAYS}
+      - MODEL_CACHE=${MODEL_CACHE}
+      - LLM_URL=${LLM_URL}
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_MODEL=${LLM_MODEL}
+    depends_on:
+      db: { condition: service_healthy }
+    ports: [ "${API_PORT}:8000" ]
+    volumes: [ "modelcache:${MODEL_CACHE}" ]
+volumes: { pgdata: {}, modelcache: {} }
