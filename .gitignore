@@ -1,13 +1,34 @@
-__pycache__/
-*.pyc
-.venv/
-venv/
+# Node modules (if applicable)
 node_modules/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VS Code settings
 .vscode/
-.idea/
+
+# Log files
+*.log
+
+# Build artifacts
 dist/
 build/
-*.env
-.env
-modelcache/
-pgdata/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Local database or memory files
+memory.db
+*.sqlite3
+
+# Ignore the LTM repo if nested and not meant to be tracked
+mene-ltm/
