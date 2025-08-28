@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.env
+*.egg-info/
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+
+# Large binary files (stored in AI Drive)
+*.zip
+*.mp3
+*.mp4
+*.wav
+*.m4a
+*.opus
+*.webm
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# OS
+.DS_Store
+Thumbs.db
