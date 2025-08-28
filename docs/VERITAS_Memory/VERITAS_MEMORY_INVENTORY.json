@@ -1,0 +1,61 @@
+{
+  "consolidation_date": "2025-08-07T15:31:09.090024",
+  "total_size_mb": 353.68541049957275,
+  "total_files": 197,
+  "structure": {
+    "projects": {
+      "path": "/mnt/aidrive/veritas_ai_memory/projects",
+      "size_mb": 295.16,
+      "file_count": 134,
+      "subdirectories": [
+        "Aluna_Africa_Website",
+        "Black_Orchid_Indicator",
+        "Cake-O-Clock",
+        "Truth_Button",
+        "Yungblud",
+        "ZA_Deals_App",
+        "aluna_africa_complete_download",
+        "aluna_africa_complete_package",
+        "rob_videos",
+        "vibe_engineering_stack"
+      ]
+    },
+    "audio": {
+      "path": "/mnt/aidrive/veritas_ai_memory/audio",
+      "size_mb": 52.62,
+      "file_count": 32,
+      "subdirectories": [
+        "Podcast Voices",
+        "Podcast_Assets",
+        "Voice_Wizard",
+        "voice_samples"
+      ]
+    },
+    "systems": {
+      "path": "/mnt/aidrive/veritas_ai_memory/systems",
+      "size_mb": 0.09,
+      "file_count": 9,
+      "subdirectories": [
+        "ai_bridge_system"
+      ]
+    },
+    "archives": {
+      "path": "/mnt/aidrive/veritas_ai_memory/archives",
+      "size_mb": 5.51,
+      "file_count": 4,
+      "subdirectories": [
+        "ai_generated_content",
+        "root_files"
+      ]
+    },
+    "logs": {
+      "path": "/mnt/aidrive/veritas_ai_memory/logs",
+      "size_mb": 0.3,
+      "file_count": 18,
+      "subdirectories": [
+        "VERITAS_AI_MEMORY_RAG_UPDATED",
+        "Veritas_Intelligence_Suite"
+      ]
+    }
+  }
+}
